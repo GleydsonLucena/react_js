@@ -6,7 +6,7 @@ const Home = () => {
 
   return (
 
-    <main className="main-container">
+    <main className="main-container-home">
 
       <section className="container">
         <h1>Meu primeiro componente react</h1>

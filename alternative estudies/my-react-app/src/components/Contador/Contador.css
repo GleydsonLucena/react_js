@@ -1,0 +1,7 @@
+.container-contador {
+  width: 30rem;
+  padding: 1rem;
+  border-radius: 0 0 .5rem .5rem;
+  text-align: center;
+  background-color: #fff;
+}

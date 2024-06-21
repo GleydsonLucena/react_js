@@ -1,8 +1,9 @@
-.main-container {
-  max-width: 20rem;
-  background-color: #fff;
-  border-radius: .5rem;
+.main-container-home {
+  max-width: 30rem;
+  height: auto;
+  border-radius: .5rem .5rem 0 0 ;
   padding: 1rem;
+  background-color: #fff;
 }
 
 .main-container h1 {
