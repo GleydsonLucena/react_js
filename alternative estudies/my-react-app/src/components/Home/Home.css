@@ -1,0 +1,14 @@
+.main-container {
+  max-width: 20rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.main-container h1 {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 900;
+  text-transform: capitalize;
+}
