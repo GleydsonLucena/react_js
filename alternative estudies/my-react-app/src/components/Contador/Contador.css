@@ -5,3 +5,21 @@
   text-align: center;
   background-color: #fff;
 }
+
+div {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  padding: .5rem;
+  border-radius: 2rem;
+  background-color:  rgb(201, 169, 113);
+  border: .1rem solid #EEE;
+  transition: all .3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: .1rem solid rgb(201, 169, 113);
+}
