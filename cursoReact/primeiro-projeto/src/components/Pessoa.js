@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const Pessoa = ({ nome, idade, foto, profissao }) => {
     return (
@@ -13,7 +12,5 @@ const Pessoa = ({ nome, idade, foto, profissao }) => {
         </div>
     )
 }
-
-Pessoa.propTypes = {}
 
 export default Pessoa
