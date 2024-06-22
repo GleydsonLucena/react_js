@@ -1,4 +1,5 @@
 import './App.css';
+import HelloWorld from './components/HelloWorld';
 
 function App() {
 
@@ -6,13 +7,10 @@ function App() {
 
   const newName = name.toUpperCase();
 
-  const url = 'https://via.placeholder.com/200';
-
   return (
     <div className="App">
-      <h1>Meu primeiro projeto</h1>
-      <p>Olá, {newName}</p>
-      <img src={url} alt="minha imagem" />
+      <HelloWorld />
+      <p>Olá {newName}</p>
     </div>
   );
 }
