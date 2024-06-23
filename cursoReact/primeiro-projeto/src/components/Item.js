@@ -13,9 +13,9 @@ Item.propTypes = {
   AnoLancamento: PropTypes.number.isRequired
 }
 
-Item.defaultProps = {
-  marca: "Faltou a marca!",
-  AnoLancamento: 0,
-}
+  // Item.defaultProps = {
+  // marca: "Faltou a marca!",
+  // AnoLancamento: 0,
+  // }
 
 export default Item

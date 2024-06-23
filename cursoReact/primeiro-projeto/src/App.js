@@ -1,4 +1,6 @@
 import './App.css';
+import Evento from './components/Evento';
+import Form from './components/Form';
 import HelloWorld from './components/HelloWorld';
 import List from './components/List';
 import Pessoa from './components/Pessoa';
@@ -24,6 +26,10 @@ function App() {
       />
 
       <List />
+
+      <Evento />
+
+      <Form />
     </div>
   );
 }
