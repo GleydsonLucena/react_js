@@ -6,10 +6,15 @@ const Condicional = () => {
   const [useEmail, setUseEmail] = useState()
 
   const enviarEmail = (e) => {
-    e.preventDefault()
-    setUseEmail(email)
-    console.log(useEmail)
-  }
+    e.preventDefault();
+    setUseEmail(email);
+    console.log(useEmail);
+  };
+
+  const limparEmail = (setUseEmail) => {
+    setUseEmail('');
+    
+  };
 
   return (
     <>
@@ -24,9 +29,10 @@ const Condicional = () => {
         />
         <button onClick={enviarEmail}>Enviar</button>
 
-        {useEmail && (
+        { useEmail && (
           <div>
             <p>O email do usuário é {useEmail}</p>
+            <button onClick={limparEmail}>Limpar</button>
           </div>
         )}
 
