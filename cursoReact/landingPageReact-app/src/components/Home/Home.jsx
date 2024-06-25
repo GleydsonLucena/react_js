@@ -1,21 +1,18 @@
-import styles from "./Home.module.css";
 import "./Home.scss"
+import svg from "./img.svg";
 
 const Home = () => {
   return (
-    <section className={styles.homeContainer}>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita possimus assumenda minima molestiae, iure pariatur voluptates exercitationem ducimus voluptatum natus ipsa. Ab explicabo vitae perferendis aperiam dicta incidunt at qui.</p>
+    <section className="homeContainer">
 
-
-        <div className="divTeste">
+      <h1 className="tittle-Text">
           Lorem ipsum dolor sit amet.
-          <div className="divFilho">
-            Lorem ipsum dolor sit amet.
-            <div className="divNeto">
-              Lorem ipsum dolor sit amet.
-            </div>
-          </div>
-        </div>
+      </h1>
+
+      <div>
+        <img src={svg} alt="nada" />
+      </div>
+      
     </section>
   )
 }
