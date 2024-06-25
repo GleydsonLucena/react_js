@@ -9,6 +9,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <div className="main-container">
       <Home />
       <Contador />
-    </div>zd
+    </div>
   </React.StrictMode>,
 )
