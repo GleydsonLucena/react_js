@@ -15,14 +15,17 @@
 
 a {
   font-weight: 500;
-  color: #FFF;
+  color: #000;
   text-decoration: none;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   display: flex;
   justify-content: center;
 }

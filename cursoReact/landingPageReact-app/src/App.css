@@ -1,5 +1,6 @@
 .mainContainer {
   background-color: lightblue;
   min-height: 100vh;
-  min-width: 75rem;
+  min-width: 100vw;
+  overflow-x: hidden;
 }

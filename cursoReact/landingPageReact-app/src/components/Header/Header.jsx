@@ -1,14 +1,22 @@
+import styles from "./Header.module.css";
+
 const Header = () => {
   return (
-    <header className="headerContainer">
-      <h2 className="logoText">LOGO</h2>
-      <nav className="navContainer">
-        <li>
-          <a href="#">Home</a>
-          <a href="#">Sobre</a>
-          <a href="#">Galeria</a>
-        </li>
-      </nav>
+    <header className={styles.headerContainer}>
+      <div className={styles.headerContent}>
+        <h2><a href="#">LOGO</a></h2>
+        <nav>
+
+          <ul className={styles.navContainer}>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Galeria</a></li>
+          </ul>
+
+        </nav>
+
+        <button>Contato</button>
+      </div>
     </header>
   )
 }

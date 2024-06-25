@@ -1,0 +1,11 @@
+.divTeste {
+  background-color: lightblue;
+
+  .divFilho {
+    background-color: lightcoral;
+
+    .divNeto {
+      background-color: #000;
+    }
+  }
+}
