@@ -10,5 +10,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Home />
       <Contador />
     </div>
-  </React.StrictMode>,
+  </React.StrictMode>,gfdgd
 )
