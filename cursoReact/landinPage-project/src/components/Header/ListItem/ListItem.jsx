@@ -2,7 +2,7 @@ import React from 'react'
 
 const ListItem = ({ text }) => {
   return (
-    <li className="item">
+    <li className="ListItem">
       {text}
     </li>
   )
