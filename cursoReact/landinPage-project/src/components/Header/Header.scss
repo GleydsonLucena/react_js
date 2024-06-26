@@ -1,3 +1,17 @@
-h2 {
-  color: #000;
+@import "../../assets/scss/variables.scss";
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  max-width: 75rem;
+  width: 75rem;
+  min-height: 4.5rem;
+  background-color: lightblue;
+
+  h2 {
+    color: $black;
+  }
 }
+
