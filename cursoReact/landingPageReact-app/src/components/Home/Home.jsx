@@ -1,18 +1,20 @@
+import GamesList from './GamesList'
 import "./Home.scss"
-import svg from "./img.svg";
+import data from "./data.json";
 
 const Home = () => {
   return (
     <section className="homeContainer">
 
       <h1 className="tittle-Text">
-          Lorem ipsum dolor sit amet.
+        Lorem ipsum dolor sit amet.
       </h1>
 
       <div>
-        <img src={svg} alt="nada" />
+        <GamesList jogos={data.jogos} />
       </div>
-      
+
+
     </section>
   )
 }
