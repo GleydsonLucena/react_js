@@ -8,7 +8,6 @@ function App() {
     <header className="headerContainer">
       <Header />
 
-
     </header>
   )
 }

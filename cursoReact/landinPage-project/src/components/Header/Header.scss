@@ -8,10 +8,40 @@
   max-width: 75rem;
   width: 75rem;
   min-height: 4.5rem;
-  background-color: lightblue;
 
-  h2 {
+  & > h2 {
     color: $black;
   }
+
+  & > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    list-style-type: none
+  }
+
 }
+
+.btn {
+  cursor: pointer;
+  padding: 2rem 5rem;
+  border: none;
+  background-color: ;
+}
+
+.btn-face-blue {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-face-gradient {
+  // display: none;
+  width: 100%;
+  height: 100%;
+  background: $gradient;
+}
+
+
+
 

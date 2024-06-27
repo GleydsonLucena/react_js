@@ -2,6 +2,7 @@
 import React from 'react'
 import "./Header.scss";
 import ListItem from './ListItem/ListItem';
+import Button from './Button';
 
 const Header = () => {
   return (
@@ -13,6 +14,8 @@ const Header = () => {
         <ListItem text={"Sobre"} />
         <ListItem text={"Galeria"} />
       </ul>
+
+      <Button text={'Contato'} />
 
 
     </header>
