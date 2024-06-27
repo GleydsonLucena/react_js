@@ -1,12 +1,14 @@
+import "./Home.scss"
 import Imagem from "./Imagem";
 import imagemHomem from "../../assets/img/men.png";
-im´
+import HomeAside from './HomeAside';
 
 const Home = () => {
   return (
-    <section className="home-container">
-      <Imagem img={imagemHomem} />
-    </section>
+    <div className="home-content">
+      <HomeAside />
+      <Imagem img={imagemHomem} className={'img-homem-png'} />
+    </div>
   )
 }
 

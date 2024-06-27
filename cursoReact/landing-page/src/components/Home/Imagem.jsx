@@ -1,14 +1,18 @@
-
+import "./Home.scss"
 import PropTypes from 'prop-types'
 
-const Imagem = props => {
+const Imagem = ({ img, className, alt }) => {
   return (
-    <img src={props.img} alt="" />
+    <div className="img-container">
+      <img className={className} src={img} alt={alt} />
+    </div>
   )
 }
 
 Imagem.propTypes = {
-  img: PropTypes.any,
+  img: PropTypes.any.isRequired,
+  className: PropTypes.string.isRequired,
+  alt: PropTypes.string,
 }
 
 export default Imagem

@@ -10,7 +10,11 @@ function App() {
       </header>
 
       <main className="main-container">
-        <Home />
+
+        <section className="home-container">
+          <Home />
+
+        </section>
       </main>
 
     </>

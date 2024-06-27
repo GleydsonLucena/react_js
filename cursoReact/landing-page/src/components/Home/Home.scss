@@ -1,9 +1,46 @@
-@import "./variables.scss";
+@import "../../assets/scss/variables.scss";
 
-.home-container {
-  min-height: 100vh;
-  background-position: center center;
-  background: url(../img/bg.jpg) no-repeat;
-  background-size: cover;
-  color: white;
+.home-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-inline: 2rem;
+  min-height: auto;
+  width: 75rem;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  width: 45%;
+  padding: 2rem;
+
+  & h1 {
+    font-size: 3em;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+
+  & span {
+    font-weight: 900;
+  }
+
+  & p {
+    font-size: 1.1rem;
+    font-weight: 200;
+    letter-spacing: .02rem;
+  }
+}
+
+.img-container {
+  display: flex;  
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.img-homem-png {
+  
 }

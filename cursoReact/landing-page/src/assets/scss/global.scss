@@ -12,3 +12,12 @@
   height: auto;
   min-width: 100vw;
 }
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  min-width: 100vh;
+  background:center right url(../../assets/img/bg.jpg) no-repeat;
+  background-size: cover;
+}
