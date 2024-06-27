@@ -1,0 +1,9 @@
+@import "./variables.scss";
+
+.home-container {
+  min-height: 100vh;
+  background-position: center center;
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+  color: white;
+}

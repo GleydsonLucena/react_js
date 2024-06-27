@@ -1,4 +1,5 @@
 import "./assets/scss/global.scss";
+import Home from './components/Home/Home';
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
       </header>
 
       <main className="main-container">
-        <h1>opa</h1>
+        <Home />
       </main>
 
     </>
