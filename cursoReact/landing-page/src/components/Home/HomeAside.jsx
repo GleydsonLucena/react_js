@@ -1,3 +1,4 @@
+import Button from '../Button'
 import "./Home.scss"
 
 const HomeAside = () => {
@@ -9,7 +10,8 @@ const HomeAside = () => {
         A supporting statement for your value proposition to encourage customers to complete your CTA .
       </p>
 
-      <div>Button</div>
+      <Button className={'btn-aside'} text={'get-offer'} />
+
 
     </div>
   )
