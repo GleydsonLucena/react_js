@@ -1,20 +1,32 @@
 {
-  "project": [], 
+  "project": [
+    {
+      "id": "ae10",
+      "nameProject": "Teste",
+      "budgetProject": "5000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
   "categories": [
     {
-      "id": 1, 
+      "id": "1",
       "name": "Infra"
     },
     {
-      "id": 2, 
+      "id": "2",
       "name": "Desenvolvimento"
     },
     {
-      "id": 3, 
+      "id": "3",
       "name": "Design"
     },
     {
-      "id": 4, 
+      "id": "4",
       "name": "Planejamento"
     }
   ]

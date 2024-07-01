@@ -24,13 +24,11 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
 
   const submit = (e) => {
     e.preventDefault();
-    console.log(projects)
-    // handleSubmit(project);
+    handleSubmit(project);
   }
 
   const handleChange = (e) => {
     setProject({ ...project, [e.target.name]: e.target.value })
-    console.log(project)
   };
 
   const handleCategory = (e) => {
@@ -48,10 +46,10 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
       <Input
         type='text'
         text='Nome do Projeto:'
-        name='NameProject'
+        name='nameProject'
         placeholder='Digite o nome do projeto'
         handleOnChange={handleChange}
-        project={project.nameProject ? project.nameProject : ''}
+        value={project.nameProject ? project.nameProject : ''}
       />
       <Input
         type='number'
@@ -60,6 +58,7 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
         placeholder='Digite o orçamento do projeto'
         handleOnChange={handleChange}
         value={project.budgetProject ? project.budgetProject : ''}
+
 
       />
 
