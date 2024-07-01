@@ -1,8 +1,19 @@
-import React from 'react'
+import { useLocation } from 'react-router-dom';
+import Message from "../layout/Message";
 
 const Projects = () => {
+
+  const location = useLocation();
+  let messages = '';
+  if (location.state) {
+    messages = location.state.messages;
+  }
   return (
-    <h1>Projects</h1>
+    <div>
+      <h1>Meus Projetos</h1>
+      {messages && <Message msg={messages} type='success' />}
+
+    </div>
   )
 }
 

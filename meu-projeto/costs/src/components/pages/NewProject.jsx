@@ -19,7 +19,6 @@ const NewProject = () => {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         navigate('/projects', { message: 'Projeto criado com sucesso' });
       })
       .catch(err => console.error(err));
