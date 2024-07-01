@@ -10,7 +10,7 @@ const Input = ({ type, text, name, placeholder, handleOnChange, value }) => {
         name={name}
         id={name}
         placeholder={placeholder}
-        value={value}
+        value={value || ''}
         onChange={handleOnChange} />
     </div>
   )

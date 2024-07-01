@@ -8,11 +8,6 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
   const [categories, setCategories] = useState([]);
   const [project, setProject] = useState(projectData || {});
 
-  const submit = (e) => {
-    e.preventDefault();
-    handleSubmit(project);
-  }
-
   useEffect(() => {
     fetch('http://localhost:5000/categories/', {
       method: 'GET',
@@ -27,6 +22,26 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
       .catch(err => console.error(err));
   }, []);
 
+  const submit = (e) => {
+    e.preventDefault();
+    console.log(projects)
+    // handleSubmit(project);
+  }
+
+  const handleChange = (e) => {
+    setProject({ ...project, [e.target.name]: e.target.value })
+    console.log(project)
+  };
+
+  const handleCategory = (e) => {
+    setProject({
+      ...project, category: {
+        id: e.target.value,
+        name: e.target.options[e.target.selectedIndex].text,
+      }
+    });
+  };
+
   return (
     <form onSubmit={submit} className={styles.form_container}>
 
@@ -35,18 +50,25 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
         text='Nome do Projeto:'
         name='NameProject'
         placeholder='Digite o nome do projeto'
+        handleOnChange={handleChange}
+        project={project.nameProject ? project.nameProject : ''}
       />
       <Input
         type='number'
         text='Orçamento do Projeto:'
         name='budgetProject'
         placeholder='Digite o orçamento do projeto'
+        handleOnChange={handleChange}
+        value={project.budgetProject ? project.budgetProject : ''}
+
       />
 
       <Select
         nome={'category_id'}
         text={'Selecione a categoria'}
         options={categories}
+        handleOnChange={handleCategory}
+        value={project.category ? project.category.id : ''}
       />
 
       <SubmitButton text={btnText} />
