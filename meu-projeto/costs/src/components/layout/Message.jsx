@@ -5,9 +5,14 @@ const Message = ({ msg, type }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (!msg) return;
+    if (!msg) {
+      setVisible(false);
+      return;
+    }
+
     setVisible(true);
-    setTimeout(() => {
+
+    const timer = setTimeout(() => {
       setVisible(false);
     }, 3000);
 
@@ -16,9 +21,7 @@ const Message = ({ msg, type }) => {
 
   return (
     <>
-      {
-        visible && <div className={`${styles.messsage} ${styles[type]}`}>{msg}</div>
-      }
+      {visible && <div className={`${styles.messsage} ${styles[type]}`}>{msg}</div>}
     </>
   )
 }
