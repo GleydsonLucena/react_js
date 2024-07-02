@@ -1,34 +1,12 @@
 {
   "project": [
     {
-      "id": "5620",
-      "nameProject": "Landing Page",
-      "budgetProject": "75000",
+      "id": "891a",
+      "nameProject": "adssada",
+      "budgetProject": "1561561",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "4586",
-      "nameProject": "Teste 3 ",
-      "budgetProject": "5415354",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "e2f6",
-      "nameProject": "Samara",
-      "budgetProject": "150000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
       },
       "cost": 0,
       "services": []

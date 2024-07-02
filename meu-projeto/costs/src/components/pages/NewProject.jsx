@@ -19,7 +19,12 @@ const NewProject = () => {
     })
       .then(response => response.json())
       .then(data => {
-        navigate('/projects', { state: { message: 'Projeto criado com sucesso' } });
+        navigate('/projects', {
+          state: {
+            message: 'Projeto criado com sucesso',
+            messageRemoved: 'Projeto removido com sucesso',
+          }
+        });
       })
       .catch(err => console.error(err));
   }
