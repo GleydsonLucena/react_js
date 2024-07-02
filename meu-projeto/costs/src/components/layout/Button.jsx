@@ -1,9 +1,9 @@
 import styles from '../layout/module/Button.module.css';
 
-const Button = ({ icon, text }) => {
+const Button = ({ icon, text, handleRemove }) => {
   return (
     <div>
-      <button className={styles.btn}>
+      <button onclick={handleRemove} className={styles.btn}>
         {icon}{text}
       </button>
     </div>

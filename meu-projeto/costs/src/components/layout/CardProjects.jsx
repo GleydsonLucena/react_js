@@ -4,6 +4,8 @@ import { FaTrashCan, FaPencil } from "react-icons/fa6";
 import Button from './Button';
 
 const CardProjects = ({ id, name, budget, category, handleRemove }) => {
+
+
   return (
     <div className={styles.card_container}>
       <div className={styles.tittle_container}>
@@ -13,7 +15,7 @@ const CardProjects = ({ id, name, budget, category, handleRemove }) => {
       <p><span></span> {category}</p>
       <div className={styles.btn_container}>
         <Button icon={<FaPencil />} text='Editar' />
-        <Button event={handleRemove} icon={<FaTrashCan />} text='Excluir' />
+        <Button handleRemove={handleRemove} icon={<FaTrashCan />} text='Excluir' />
       </div>
     </div>
   )

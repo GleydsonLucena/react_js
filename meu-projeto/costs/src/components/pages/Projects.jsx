@@ -9,7 +9,6 @@ import styles from "../layout/module/Projects.module.css";
 
 const Projects = () => {
 
-
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -32,6 +31,14 @@ const Projects = () => {
   if (location.state) {
     messages = location.state.message
   }
+
+  const handleRemove = () => {
+    const newProjects = [...projects]
+    newProjects.splice(index, 1);
+
+    setProjects(newProjects);
+  };
+
   return (
     <div className={styles.projects_container}>
       <div className={styles.tittle_container}>
@@ -40,11 +47,13 @@ const Projects = () => {
       </div>
       {messages && <Message msg={messages} type="success" />}
       <Container customClass='start' >{
-        projects.map(project => (
+        projects.map((project, index) => (
           <CardProjects
             name={project.nameProject}
+            id={project.id}
             budget={project.budgetProject}
             category={project.category.name}
+            handleRemove={handleRemove}
           />
         ))
       }</Container>
