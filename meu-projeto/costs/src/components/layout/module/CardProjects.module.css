@@ -47,6 +47,33 @@
   height: 20%;
 }
 
+.btn_container a, 
+.btn_container button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .8rem;
+  font-size: 1.4rem;
+  padding: 0 2.5rem;
+  text-decoration: none;
+  border: none;
+  border: .02rem solid #222222d0;
+  color: #222;
+  background-color: #fff;
+  transition: 400ms;
+}
+
+.btn_container svg {
+  margin-right: .5rem;
+}
+
+.btn_container a:hover,
+.btn_container button:hover {
+  background-color: #222;
+  color: #ffbb33;
+}
+
 .category_text .infra {
   background-color: #ffaebc;
 }

@@ -1,7 +1,6 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 import styles from "../layout/module/CardProjects.module.css";
 import { FaTrashCan, FaPencil } from "react-icons/fa6";
-import Button from './Button';
 
 const CardProjects = ({ id, name, budget, category, handleRemove }) => {
 
@@ -16,8 +15,14 @@ const CardProjects = ({ id, name, budget, category, handleRemove }) => {
         <span className={`${styles[category.toLowerCase()]}`}></span> {category}
       </p>
       <div className={styles.btn_container}>
-        <Button icon={<FaPencil />} text='Editar' />
-        <Button handleRemove={handleRemove} icon={<FaTrashCan />} text='Excluir' />
+        <Link to='/'>
+          <FaPencil />
+          Editar
+        </Link>
+        <button onClick={handleRemove}>
+          <FaTrashCan />
+          Excluir
+        </button>
       </div>
     </div>
   )
