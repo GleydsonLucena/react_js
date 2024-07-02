@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "../layout/module/CardProjects.module.css";
 import { FaTrashCan, FaPencil } from "react-icons/fa6";
 
 const CardProjects = ({ id, name, budget, category, handleRemove }) => {
 
-
+  const remove = (e) => {
+    e.preventDefault();
+    handleRemove(id);
+  }
   return (
     <div className={styles.card_container}>
       <div className={styles.tittle_container}>
@@ -19,7 +22,7 @@ const CardProjects = ({ id, name, budget, category, handleRemove }) => {
           <FaPencil />
           Editar
         </Link>
-        <button onClick={handleRemove}>
+        <button onClick={remove}>
           <FaTrashCan />
           Excluir
         </button>

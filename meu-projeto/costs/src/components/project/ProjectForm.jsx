@@ -31,6 +31,8 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
     setProject({ ...project, [e.target.name]: e.target.value })
   };
 
+
+
   const handleCategory = (e) => {
     setProject({
       ...project, category: {
