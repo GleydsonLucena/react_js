@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import Message from "../layout/Message";
 import Container from "../layout/Container";
+import Loading from "../layout/Loading";
 import LinkButton from "../layout/LinkButton";
 import CardProjects from '../layout/CardProjects';
 
@@ -10,20 +11,24 @@ import styles from "../layout/module/Projects.module.css";
 const Projects = () => {
 
   const [projects, setProjects] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   useEffect(() => {
 
-    fetch('http://localhost:5000/project', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    })
-      .then(response => response.json())
-      .then(data => {
-        setProjects(data);
+    setTimeout(() => {
+      fetch('http://localhost:5000/project', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
       })
-      .catch(err => console.error(err));
+        .then(response => response.json())
+        .then(data => {
+          setProjects(data);
+          setRemoveLoading(true);
+        })
+        .catch(err => console.error(err));
+    }, 500);
   }, []);
 
   const location = useLocation();
@@ -47,19 +52,23 @@ const Projects = () => {
       </div>
       {messages && <Message msg={messages} type="success" />}
       <Container customClass='start' >
-        {projects && 
-        projects.map((project, index) => (
-          <CardProjects
-            key={project.id}
-            id={project.id}
-            name={project.nameProject}
-            budget={project.budgetProject}
-            category={project.category.name}
-            handleRemove={handleRemove}
-          />
-        ))}</Container>
-
-
+        {
+          projects.length > 0 &&
+          projects.map((project) => (
+            <CardProjects
+              key={project.id}
+              id={project.id}
+              name={project.nameProject}
+              budget={project.budgetProject}
+              category={project.category.name}
+              handleRemove={handleRemove}
+            />))}
+        {!removeLoading && < Loading />}
+        {
+          removeLoading && projects.length === 0 &&
+          <p>Não há projetos cadastrados!</p>
+        }
+      </Container>
     </div>
   )
 }

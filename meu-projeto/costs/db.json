@@ -1,45 +1,12 @@
 {
   "project": [
     {
-      "id": "5620",
-      "nameProject": "Landing Page",
-      "budgetProject": "75000",
+      "id": "a9f9",
+      "nameProject": "Teste 1",
+      "budgetProject": "15000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "4586",
-      "nameProject": "Teste 3 ",
-      "budgetProject": "5415354",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "e2f6",
-      "nameProject": "Samara",
-      "budgetProject": "150000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "c627",
-      "nameProject": "Teste 5 ",
-      "budgetProject": "1500",
-      "category": {
-        "id": "1",
-        "name": "Infra"
       },
       "cost": 0,
       "services": []
