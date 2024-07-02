@@ -34,7 +34,7 @@ const Projects = () => {
 
   const handleRemove = () => {
     const newProjects = [...projects]
-    newProjects.splice(index, 1);
+    newProjects.splice(newProjects.indexOf, 1);
 
     setProjects(newProjects);
   };
@@ -46,17 +46,18 @@ const Projects = () => {
         <LinkButton to='/newproject' text='Novo Projeto' />
       </div>
       {messages && <Message msg={messages} type="success" />}
-      <Container customClass='start' >{
+      <Container customClass='start' >
+        {projects && 
         projects.map((project, index) => (
           <CardProjects
-            name={project.nameProject}
+            key={project.id}
             id={project.id}
+            name={project.nameProject}
             budget={project.budgetProject}
             category={project.category.name}
             handleRemove={handleRemove}
           />
-        ))
-      }</Container>
+        ))}</Container>
 
 
     </div>

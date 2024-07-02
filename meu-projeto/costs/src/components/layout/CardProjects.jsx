@@ -11,8 +11,10 @@ const CardProjects = ({ id, name, budget, category, handleRemove }) => {
       <div className={styles.tittle_container}>
         <h2>{name}</h2>
       </div>
-      <p><strong>Orçamento</strong>: R$ {budget},00 </p>
-      <p><span></span> {category}</p>
+      <p><strong>Orçamento</strong>: R$ {budget} </p>
+      <p className={styles.category_text}>
+        <span className={`${styles[category.toLowerCase()]}`}></span> {category}
+      </p>
       <div className={styles.btn_container}>
         <Button icon={<FaPencil />} text='Editar' />
         <Button handleRemove={handleRemove} icon={<FaTrashCan />} text='Excluir' />
