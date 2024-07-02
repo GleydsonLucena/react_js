@@ -1,0 +1,10 @@
+.projects_container {
+  padding: 4rem 1rem;
+  width: 100%;
+}
+
+.tittle_container {
+  display: flex;  
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
