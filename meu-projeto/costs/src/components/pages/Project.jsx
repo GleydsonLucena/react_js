@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import Loading from '../layout/Loading';
 import Container from '../layout/Container';
@@ -8,6 +8,7 @@ const Project = () => {
 
   const { id } = useParams();
   const [project, setProject] = useState([]);
+  const [showProjectForm, setShowProjectForm] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,18 +24,22 @@ const Project = () => {
     }, 200);
   }, []);
 
+  const toggleProjectForm = () => {
+    setShowProjectForm(true);
+  }
+
   return (
     <>
       {project.nameProject ? (
         <Container customClass='column'>
           <div className={styles.project_container}>
+            <h1>Projeto: {project.nameProject}</h1>
+            <button >Editar Projeto</button>
             <div className={styles.project_content}>
-              <h1>Projeto: {project.nameProject}</h1>
               <p><span>Categoria:</span> {project.category.name}</p>
               <p><span>Total do Orçamento:</span> R$ {project.budgetProject}</p>
               <p><span>Total Utilizado:</span> R$ {project.cost}</p>
             </div>
-            <Link>Editar Projeto</Link>
           </div>
         </Container>
       )
