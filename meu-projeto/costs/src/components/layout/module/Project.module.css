@@ -39,10 +39,9 @@
     text-decoration: none;
     color: #fff;
     background-color: #222;
-    transition: all 400ms ease-in-out;
+    transition: 400ms;
     height: max-content;
     font-size: 1.5rem;
-    -webkit-transition: all 5s ease-in-out;
 }
 
 .btn:hover {

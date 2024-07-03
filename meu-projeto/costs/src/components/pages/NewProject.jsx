@@ -22,7 +22,6 @@ const NewProject = () => {
         navigate('/projects', {
           state: {
             message: 'Projeto criado com sucesso',
-            messageRemoved: 'Projeto removido com sucesso',
           }
         });
       })
