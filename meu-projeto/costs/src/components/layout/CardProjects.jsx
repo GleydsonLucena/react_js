@@ -18,7 +18,7 @@ const CardProjects = ({ id, name, budget, category, handleRemove }) => {
         <span className={`${styles[category.toLowerCase()]}`}></span> {category}
       </p>
       <div className={styles.btn_container}>
-        <Link to='/'>
+        <Link to={`/project/${id}`}>
           <FaPencil />
           Editar
         </Link>
