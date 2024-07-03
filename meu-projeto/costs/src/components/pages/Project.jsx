@@ -25,23 +25,40 @@ const Project = () => {
   }, []);
 
   const toggleProjectForm = () => {
-    setShowProjectForm(true);
+    setShowProjectForm(!showProjectForm);
   }
 
   return (
     <>
       {project.nameProject ? (
-        <Container customClass='column'>
-          <div className={styles.project_container}>
-            <h1>Projeto: {project.nameProject}</h1>
-            <button >Editar Projeto</button>
-            <div className={styles.project_content}>
-              <p><span>Categoria:</span> {project.category.name}</p>
-              <p><span>Total do Orçamento:</span> R$ {project.budgetProject}</p>
-              <p><span>Total Utilizado:</span> R$ {project.cost}</p>
+        <div className={styles.project_details}>
+          <Container customClass='column'>
+            <div className={styles.details_container}>
+              <h1>Projeto: {project.nameProject}</h1>
+              <button onClick={toggleProjectForm} className={styles.btn}>
+                {!showProjectForm
+                  ? 'Editar Projeto'
+                  : 'Fechar'}
+              </button>
+              {!showProjectForm
+                ? (<div className={styles.project_info}>
+                  <p>
+                    <span>Categoria:</span> {project.category.name}
+                  </p>
+                  <p>
+                    <span>Total do Orçamento:</span> R$ {project.budgetProject}
+                  </p>
+                  <p>
+                    <span>Total Utilizado :</span> R$ {project.cost}
+                  </p>
+                </div>)
+                : (<div className={styles.project_info}>
+                  <p>editar projeto</p>
+                </div>)
+              }
             </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       )
         : <Loading />}
     </>
