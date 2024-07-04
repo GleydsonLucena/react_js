@@ -41,7 +41,7 @@ const Projects = () => {
       },
     })
       .then(response => response.json())
-      .then(data => {
+      .then(() => {
         setProjects(projects.filter(project => project.id !== id));
         setProjectMessage('Projeto removido com sucesso!');
       })
