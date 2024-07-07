@@ -1,0 +1,39 @@
+{
+    "games": [ 
+    {
+        "name": "The Legend of Zelda: Breath of the Wild",
+        "description": "An action-adventure game set in an open world.",
+        "price": 59.99,
+        "release_year": 2017,
+        "image_url": "https://example.com/images/zelda_botw.jpg"
+    },
+    {
+        "name": "Super Mario Odyssey",
+        "description": "A 3D platform game where Mario embarks on a globe-trotting adventure.",
+        "price": 49.99,
+        "release_year": 2017,
+        "image_url": "https://example.com/images/mario_odyssey.jpg"
+    },
+    {
+        "name": "Red Dead Redemption 2",
+        "description": "An epic tale of life in America at the dawn of the modern age.",
+        "price": 69.99,
+        "release_year": 2018,
+        "image_url": "https://example.com/images/red_dead_redemption_2.jpg"
+    },
+    {
+        "name": "The Witcher 3: Wild Hunt",
+        "description": "A story-driven open world RPG set in a visually stunning fantasy universe.",
+        "price": 39.99,
+        "release_year": 2015,
+        "image_url": "https://example.com/images/witcher_3.jpg"
+    },
+    {
+        "name": "Cyberpunk 2077",
+        "description": "An open world, action-adventure story set in Night City.",
+        "price": 59.99,
+        "release_year": 2020,
+        "image_url": "https://example.com/images/cyberpunk_2077.jpg"
+    }
+]
+}
