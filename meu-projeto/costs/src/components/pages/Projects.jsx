@@ -48,6 +48,21 @@ const Projects = () => {
       .catch(err => console.error(err));
   };
 
+  const handleEdit = (id) => {
+    fetch(`http://localhost:5000/project/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    }
+    ).then(response => response.json())
+      .then(data => {
+        setProjects(projects.map(project => project.id === id ? data : project));
+        setProjectMessage('Projeto editado com sucesso!');
+      });
+  };
+
+
   const location = useLocation();
   let messages;
   if (location.state) {
