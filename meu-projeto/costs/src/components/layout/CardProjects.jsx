@@ -11,7 +11,7 @@ const CardProjects = ({ id, name, budget, category, handleRemove }) => {
   return (
     <div className={styles.card_container}>
       <div className={styles.tittle_container}>
-        <h2>{name}</h2>
+        <h3>{name}</h3>
       </div>
       <p><strong>Orçamento</strong>: R$ {budget} </p>
       <p className={styles.category_text}>

@@ -6,6 +6,7 @@ import ProjectForm from '../project/ProjectForm';
 import styles from "../layout/module/Project.module.css";
 import Message from '../layout/Message';
 import ServiceForm from '../Service/ServiceForm';
+import ServiceCard from '../Service/ServiceCard';
 
 import { parse, v4 as uuidv4 } from 'uuid';
 
@@ -13,6 +14,7 @@ const Project = () => {
 
   const { id } = useParams();
   const [project, setProject] = useState([]);
+  const [services, setServices] = useState([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showServiceForm, setShowServiceForm] = useState(false);
   const [projectMessage, setProjectMessage] = useState('');
@@ -27,7 +29,10 @@ const Project = () => {
         },
       })
         .then(res => res.json())
-        .then(data => setProject(data))
+        .then(data => {
+          setProject(data);
+          setServices(data.services);
+        })
         .catch(err => console.error(err));
     }, 200);
   }, []);
@@ -43,8 +48,7 @@ const Project = () => {
   }
 
   const editPost = (data) => {
-
-    setProjectMessage('Edit',);
+    setProjectMessage('');
 
     if (data.budgetProject < data.cost) {
       setProjectMessage('O orçamento não pode ser menor que o custo do projeto!')
@@ -71,6 +75,8 @@ const Project = () => {
   }
 
   const createService = (project) => {
+    setProjectMessage('');
+
     const lastService = project.services[project.services.length - 1];
     lastService.id = uuidv4()
     const lastServiceCost = lastService.cost;
@@ -93,13 +99,48 @@ const Project = () => {
       body: JSON.stringify(project)
     })
       .then(res => res.json())
-      .then((data) => {
+      .then(() => {
         setProjectMessage('Serviço adicionado com sucesso!');
         setType('success');
-        console.log(data)
+        setShowServiceForm(false);
       })
       .catch(err => console.error(err));
   }
+
+  const removeService = (id, cost) => {
+
+    const servicesUpdated = project.services.filter(service => service.id !== id);
+    const projectUpdated = {
+      ...project,
+      services: servicesUpdated,
+      cost: parseFloat(project.cost) - parseFloat(cost)
+    };
+
+    fetch(`http://localhost:5000/project/${project.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(projectUpdated),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(() => {
+        setProject(projectUpdated);
+        setServices(servicesUpdated);
+        setProjectMessage('Serviço removido com sucesso');
+        setType('success');
+      })
+      .catch(err => {
+        console.error(err);
+        setProjectMessage('Erro ao remover serviço');
+        setType('error');
+      });
+  };
 
   return (
     <>
@@ -153,7 +194,21 @@ const Project = () => {
             </div>
             <h2>Serviços:</h2>
             <Container customClass='start'>
-              <p>Serviços</p>
+              {services.length > 0 &&
+                services.map(service =>
+                (
+                  <div key={service.id}>
+                    <ServiceCard
+                      id={service.id}
+                      name={service.name}
+                      description={service.description}
+                      cost={service.cost}
+                      handleRemove={removeService}
+                    />
+                  </div>
+                )
+                )}
+              {services.length === 0 && <p>Não ha serviços cadastrados!</p>}
             </Container>
           </Container>
         </div>

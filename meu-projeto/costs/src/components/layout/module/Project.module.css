@@ -16,6 +16,10 @@
   border-radius: .8rem;
 }
 
+.project_details h2 {
+  margin-bottom: 5rem;
+}
+
 .project_details span {
   font-weight: bold;
 }

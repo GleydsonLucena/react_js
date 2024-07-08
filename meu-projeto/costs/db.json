@@ -1,28 +1,5 @@
 {
-  "project": [
-    {
-      "id": "891a",
-      "nameProject": "Projeto ",
-      "budgetProject": "1200",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "158a",
-      "nameProject": "opa Landing ",
-      "budgetProject": "120",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    }
-  ],
+  "project": [],
   "categories": [
     {
       "id": "1",
