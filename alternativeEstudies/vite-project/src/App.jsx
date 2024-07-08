@@ -1,5 +1,5 @@
 import './assets/styles/global.sass';
-import GameList from "./components/GameList";
+// import GameList from "./components/GameList";
 import Container from "./components/layout/Container";
 
 function App() {
